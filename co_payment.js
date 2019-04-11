@@ -7,8 +7,8 @@
 
    Payment Form Script
    
-   Author: 
-   Date:   
+   Author: Micah Fischer
+   Date: 4 - 11 - 19
    
    Filename: co_payment.js
    
@@ -43,4 +43,3 @@
       Returns true of idNum satisfies the Luhn Algorithm
 
 */
-
