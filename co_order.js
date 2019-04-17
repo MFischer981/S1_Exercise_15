@@ -32,7 +32,6 @@ window.addEventListener("load", function () {
       var orderForm = document.forms.orderForm;
       orderForm.elements.orderDate.value = new Date().toDateString();
       orderForm.elements.model.focus();
-
       orderCalc();
 });
 
@@ -63,6 +62,11 @@ function orderCalc() {
 
       var totalCost = initialCost + pCost + salesTax;
       orderForm.elements.totalCost.value = formatUSCurrency(totalCost);
+
+      orderForm.elements.modelName.value =
+            orderForm.elements.model.options[mIndex].text;
+      orderForm.elements.protectionName.value =
+            document.querySelector('input[name="protection"]:checked').nextSibling.nodeValue;
 }
 
 function formatNumber(val, decimals) {
